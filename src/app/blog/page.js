@@ -1,16 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlogCard from "../../../components/BlogCard";
-
-const blogs = [
-  { id: 1 },
-  { id: 2 },
-  { id: 3 },
-];
 
 export default function Blog() {
   const [visibleCount, setVisibleCount] = useState(4);
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch("/api/blogs");
+        if (!res.ok) throw new Error("Failed to fetch blogs");
+
+        const data = await res.json();
+
+        setBlogs(data.data); 
+      } catch (err) {
+        console.error(err);
+        setBlogs([]);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
 
   const loadMore = () => {
     setVisibleCount((prev) => Math.min(prev + 4, blogs.length));
@@ -22,11 +35,17 @@ export default function Blog() {
         BLOG
       </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
-        {blogs.slice(0, visibleCount).map((blog) => (
-          <BlogCard key={blog.id} id={blog.id} />
-        ))}
-      </div>
+      {blogs.length > 0 ? (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+          {blogs.slice(0, visibleCount).map((blog) => (
+            <BlogCard key={blog.id} blog={blog} />
+          ))}
+        </div>
+      ) : (
+        <span className="w-full text-center text-[#51b957] text-2xl md:text-4xl font-normal py-16 lg:py-32">
+          Trenutno nema blogova.
+        </span>
+      )}
 
       {visibleCount < blogs.length && (
         <div className="flex justify-center">

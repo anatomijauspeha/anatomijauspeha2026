@@ -32,7 +32,7 @@ export default function Homepage() {
         />
       </div>
 
-      <h2 className="text-center tracking-widest text-[#51b957] text-xl md:text-2xl lg:text-3xl">
+      <h2 className="font-text text-center tracking-widest text-[#51b957] text-xl md:text-2xl lg:text-3xl">
         22. maj, 18:00h | Naučno-tehnološki park, Novi Sad
       </h2>
 
