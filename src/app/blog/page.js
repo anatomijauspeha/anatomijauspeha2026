@@ -6,6 +6,7 @@ import BlogCard from "../../../components/BlogCard";
 export default function Blog() {
   const [visibleCount, setVisibleCount] = useState(4);
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -14,10 +15,11 @@ export default function Blog() {
         if (!res.ok) throw new Error("Failed to fetch blogs");
 
         const data = await res.json();
-
-        setBlogs(data.data); 
+        setLoading(false);
+        setBlogs(data.data);
       } catch (err) {
         console.error(err);
+        setLoading(true);
         setBlogs([]);
       }
     };
@@ -34,6 +36,12 @@ export default function Blog() {
       <h1 className="w-full text-center text-[#51b957] text-4xl md:text-6xl lg:text-7xl font-bold">
         BLOG
       </h1>
+
+      {loading && (
+        <span className="w-full text-center text-[#51b957] text-2xl md:text-4xl font-normal py-16 lg:py-32">
+          Učitavanje...
+        </span>
+      )}
 
       {blogs.length > 0 ? (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">

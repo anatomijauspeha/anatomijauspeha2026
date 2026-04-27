@@ -4,7 +4,7 @@ export default function TeamMember({member}) {
   return (
     <div className="relative w-full h-full min-h-[280px] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[420px] rounded-2xl overflow-hidden">
       <Image
-        src={member.img}
+        src={member.img ? member.img : "/person.svg"}
         alt="Team member image"
         fill
         priority

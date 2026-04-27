@@ -1,14 +1,15 @@
 import Image from "next/image";
 import { getBlogById } from "../../../../lib/endpoints/server";
 
-export default async function BlogPost({params}) {
-  const {id} = params;
+export default async function BlogPost({ params }) {
+  const {id} = await params;
+  console.log(id);
   const blog = await getBlogById(id);
   return (
     <div className="w-full h-auto bg-black text-white">
       <div className="relative w-full h-[35vh] sm:h-[40vh] md:h-[45vh] lg:h-[50vh] overflow-hidden">
         <Image
-          src={blog.img}
+          src={blog.img ? blog.img : "/logo1.jpg"}
           alt="Blog post background"
           fill
           priority

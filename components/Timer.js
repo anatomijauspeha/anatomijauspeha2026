@@ -3,27 +3,29 @@
 import { useEffect, useState } from "react";
 
 export default function Timer() {
-  const targetDate = new Date("2026-05-22T18:00:00").getTime();
+  const targetDate = new Date("2026-06-01T18:00:00").getTime();
+
+  const [time, setTime] = useState(null);
+  const [mounted, setMounted] = useState(false);
 
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
-    const difference = targetDate - now;
+    const diff = targetDate - now;
 
-    if (difference <= 0) {
-      return [0, 0, 0, 0];
-    }
+    if (diff <= 0) return [0, 0, 0, 0];
 
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((difference / (1000 * 60)) % 60);
-    const seconds = Math.floor((difference / 1000) % 60);
-
-    return [days, hours, minutes, seconds];
+    return [
+      Math.floor(diff / (1000 * 60 * 60 * 24)),
+      Math.floor((diff / (1000 * 60 * 60)) % 24),
+      Math.floor((diff / (1000 * 60)) % 60),
+      Math.floor((diff / 1000) % 60),
+    ];
   };
 
-  const [time, setTime] = useState(calculateTimeLeft());
-
   useEffect(() => {
+    setMounted(true);
+    setTime(calculateTimeLeft());
+
     const interval = setInterval(() => {
       setTime(calculateTimeLeft());
     }, 1000);
@@ -31,27 +33,31 @@ export default function Timer() {
     return () => clearInterval(interval);
   }, []);
 
+  if (!mounted || !time) {
+    return null; // prevents hydration mismatch
+  }
+
   return (
     <div className="w-[80%] bg-[#51b957] rounded-2xl flex justify-between items-center px-6 md:px-24 py-4 md:py-8 shadow-2xl shadow-[#51b957]/30 backdrop-blur-md">
 
       <div className="flex flex-col gap-2 text-center">
         <span className="text-white text-2xl lg:text-5xl">{time[0]}</span>
-        <span className="text-white text-base lg:text-2xl">Dana</span>
+        <span className="text-white">Dana</span>
       </div>
 
       <div className="flex flex-col gap-2 text-center">
         <span className="text-white text-2xl lg:text-5xl">{time[1]}</span>
-        <span className="text-white text-base lg:text-2xl">Sata</span>
+        <span className="text-white">Sata</span>
       </div>
 
       <div className="flex flex-col gap-2 text-center">
         <span className="text-white text-2xl lg:text-5xl">{time[2]}</span>
-        <span className="text-white text-base lg:text-2xl">Minuta</span>
+        <span className="text-white">Minuta</span>
       </div>
 
       <div className="flex flex-col gap-2 text-center">
         <span className="text-white text-2xl lg:text-5xl">{time[3]}</span>
-        <span className="text-white text-base lg:text-2xl">Sekunde</span>
+        <span className="text-white">Sekunde</span>
       </div>
 
     </div>

@@ -10,11 +10,11 @@ export default async function Agenda() {
         AGENDA
       </h1>
       {events.length > 0 ? (
-        events.map((event) => (
-          <div className="bg-[#51b957] rounded-2xl h-auto p-6 sm:p-10 md:p-16 lg:p-24 flex flex-col gap-6 md:gap-10">
-            <AgendaPart key={event.id} event={event} />{" "}
-          </div>
-        ))
+        <div className="bg-[#51b957] rounded-2xl h-auto p-6 sm:p-10 md:p-16 lg:p-24 flex flex-col gap-6 md:gap-10">
+          {events.map((event) => (
+            <AgendaPart key={event.id} event={event} />
+          ))}
+        </div>
       ) : (
         <span className="w-full h-14 text-center justify-center text-[#51b957] text-2xl md:text-4xl font-normal p-16 lg:p-32">
           Uskoro...

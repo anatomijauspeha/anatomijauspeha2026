@@ -6,49 +6,43 @@ export default function About() {
       <h1 className="w-full text-center justify-start text-[#51b957] text-7xl font-bold">
         O KONFERENCIJI
       </h1>
-      <div className="flex flex-col gap-32">
-        <div className="flex flex-row justify-between">
-          <p className="w-5/12 font-text text-[#51b957] text-medium md:text-xl">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
+      <div className="flex flex-col md:flex-row gap-8 items-stretch justify-around">
+        <p className="w-full md:w-5/12 font-text text-[#51b957] text-base md:text-xl text-justify">
+          Anatomija uspeha je konferencija koju od 2015. godine organizuju
+          master studenti Fakulteta tehničkih nauka u Novom Sadu sa modula
+          Inženjerski marketing i multimediji. Ovogodišnje jubilarno izdanje,
+          pod nazivom „trAIn your brAIn“, bavi se spojem neuromarketinga i
+          veštačke inteligencije u savremenom marketingu.
+        </p>
+
+        <div className="relative w-full md:w-5/12 min-h-62.5">
           <Image
             src="/logo1.jpg"
-            width={100}
-            height={100}
             alt="Slika Anatomija Uspeha"
-            className="w-5/12"
+            fill
+            className="object-contain rounded-2xl"
           />
         </div>
       </div>
-      <div className="flex flex-col gap-32">
-        <div className="flex flex-row justify-between">
+      <div className="flex flex-col md:flex-row gap-8 items-stretch justify-around">
+        <div className="relative w-full md:w-5/12 min-h-62.5">
           <Image
             src="/logo1.jpg"
-            width={100}
-            height={100}
             alt="Slika Anatomija Uspeha"
-            className="w-5/12"
+            fill
+            className="object-contain rounded-2xl"
           />
-          <p className="w-5/12 font-text text-[#51b957] text-medium md:text-xl">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
         </div>
+        <p className="w-full md:w-5/12 font-text text-[#51b957] text-base md:text-xl text-justify">
+          U vremenu kada sve teže razlikujemo stvaran od generisanog sadržaja,
+          cilj događaja je da preispita kako naš mozak reaguje na reklame,
+          poruke i digitalni sadržaj koji svakodnevno konzumiramo. Kroz panel
+          diskusiju sa gostima, interaktivno takmičenje i demonstraciju
+          neuromarketing uređaja (EEG) za praćenje moždane aktivnosti, publika
+          će imati priliku da otkrije kako AI menja način kreiranja reklama, da
+          li generisan sadržaj može da izazove emociju kao ljudski i kako
+          neuromarketing objašnjava odluke koje donosimo često nesvesno.
+        </p>
       </div>
     </div>
   );
