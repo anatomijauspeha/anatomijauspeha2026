@@ -20,7 +20,7 @@ export default function Header() {
           <li className="flex items-center justify-center h-full cursor-pointer px-5 tracking-wide hover:bg-[#3b913f]">
             <Link href="/">Početna</Link>
           </li>
-          {/* <li className="flex items-center justify-center h-full cursor-pointer px-5 tracking-wide hover:bg-[#3b913f]">
+          <li className="flex items-center justify-center h-full cursor-pointer px-5 tracking-wide hover:bg-[#3b913f]">
             <Link href="/o-konferenciji">O konferenciji</Link>
           </li>
           <li className="flex items-center justify-center h-full cursor-pointer px-5 tracking-wide hover:bg-[#3b913f]">
@@ -28,7 +28,7 @@ export default function Header() {
           </li>
           <li className="flex items-center justify-center h-full cursor-pointer px-5 tracking-wide hover:bg-[#3b913f]">
             <Link href="/blog">Blog</Link>
-          </li> */}
+          </li>
         </ul>
       </div>
 
@@ -39,7 +39,7 @@ export default function Header() {
               Početna
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link href="/o-konferenciji" onClick={() => setIsOpen(false)}>
               O konferenciji
             </Link>
@@ -53,7 +53,7 @@ export default function Header() {
             <Link href="/blog" onClick={() => setIsOpen(false)}>
               Blog
             </Link>
-          </li> */}
+          </li>
         </ul>
       )}
     </nav>

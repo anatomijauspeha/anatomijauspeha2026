@@ -41,7 +41,7 @@ export default function RegistrationForm() {
 
       setTimeout(() => {
         router.push("/");
-      }, 2000);
+      }, 3000);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -50,19 +50,26 @@ export default function RegistrationForm() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen w-full bg-black relative">
-      <div className="bg-white relative w-full md:w-5/12 min-h-75 md:min-h-screen flex items-center justify-center overflow-hidden">
-        <h1 className="relative z-10 px-16 text-[#51b957] text-4xl md:text-6xl lg:text-8xl font-bold text-center tracking-wide leading-tight">
-          PRIDRUŽI NAM SE!
-        </h1>
-      </div>
-
-      <div className="relative w-full md:w-7/12 flex items-center justify-center py-16 md:py-32 px-6 md:px-20 lg:px-32 overflow-hidden">
+    <div className="flex flex-col md:flex-row h-auto w-full bg-black relative">
+      <div className="relative w-full md:w-5/12 h-auto md:min-h-screen flex items-center justify-center overflow-hidden py-12">
         <Image
           src="/logo.jpg"
           alt="Anatomija Uspeha logo"
           fill
-          className="object-cover brightness-40"
+          className="hidden md:block object-cover brightness-30"
+        />
+
+        <h1 className="relative z-10 px-8 md:px-16 text-[#51b957] text-4xl md:text-6xl lg:text-8xl font-bold text-center tracking-wide leading-tight">
+          PRIDRUŽI NAM SE!
+        </h1>
+      </div>
+
+      <div className="relative w-full md:w-7/12 flex flex-col items-center justify-center py-16 md:py-32 px-6 md:px-20 lg:px-32 overflow-hidden">
+        <Image
+          src="/3_2019.png"
+          alt="Anatomija Uspeha logo"
+          fill
+          className="object-cover brightness-30 blur-xs"
         />
 
         <form

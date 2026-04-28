@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function BlogCard({ blog }) {
+  const preview = blog.blocks?.find((b) => b.type === "paragraph")?.text ?? "";
+
   return (
     <Link href={`/blog/${blog.id}`}>
       <div className="relative w-full h-full min-h-[280px] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[420px] rounded-2xl overflow-hidden cursor-pointer">
@@ -20,7 +22,7 @@ export default function BlogCard({ blog }) {
             </h3>
 
             <p className="font-text line-clamp-3 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg max-w-xl">
-              {blog.content}
+              {preview}
             </p>
           </div>
         </div>
