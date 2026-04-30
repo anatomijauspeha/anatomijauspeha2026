@@ -55,6 +55,11 @@ export async function POST(req) {
         <p>Radujemo se Vašem dolasku.</p>
         <p>Srdačan pozdrav,</p>
         <p>Organizacioni tim događaja „Anatomija uspeha“</p>
+        <img 
+          src="https://anatomijauspeha2026.vercel.app/logo_email.png"
+          alt="Event Logo"
+          style="width:100%; max-width:600px;"
+        />
       `
     });
 
@@ -69,8 +74,3 @@ export async function POST(req) {
   }
 }
   //ova da se dodade vo email posle hostiranje
-        // <img 
-        //   src="https://anatomijauspeha.vercel.app/logo_email.png"
-        //   alt="Event Logo"
-        //   style="width:100%; max-width:600px;"
-        // />
