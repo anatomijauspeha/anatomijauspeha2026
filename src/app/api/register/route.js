@@ -16,6 +16,14 @@ export async function POST(req) {
       );
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      return Response.json(
+        { error: "Nevalidni format email adrese!" },
+        { status: 400 },
+      );
+    }
     const existing = await db
       .collection("Users")
       .where("email", "==", email)
@@ -40,10 +48,14 @@ export async function POST(req) {
       to: email,
       subject: "Potvrda prijave - Anatomija Uspeha 2026",
       html: `
-        <p>Zdravo ${firstname}!</p>
-        <p>Uspešno ste se prijavili za događaj.</p>
-        <p>Vidimo se!</p>
-      `,
+        <p>Poštovani,</p>
+        <p>Hvala Vam na prijavi za jubilarno izdanje događaja „Anatomija uspeha“ pod nazivom „trAIn your brAIn“.</p>
+        <p>Događaj će biti održan 22. maja u 18 časova u amfiteatru Naučno-tehnološkog parka u Novom Sadu. Očekuje Vas dinamičan program koji obuhvata panel diskusiju i interaktivni kviz, sa fokusom na odnos veštačke inteligencije i ljudske intuicije u marketingu.</p>
+        <p>U narednom periodu dostavićemo Vam sve dodatne informacije u vezi sa događajem.</p>
+        <p>Radujemo se Vašem dolasku.</p>
+        <p>Srdačan pozdrav,</p>
+        <p>Organizacioni tim događaja „Anatomija uspeha“</p>
+      `
     });
 
     return Response.json({
@@ -56,4 +68,9 @@ export async function POST(req) {
     return Response.json({ error: "Server error" }, { status: 500 });
   }
 }
-
+  //ova da se dodade vo email posle hostiranje
+        // <img 
+        //   src="https://anatomijauspeha.vercel.app/logo_email.png"
+        //   alt="Event Logo"
+        //   style="width:100%; max-width:600px;"
+        // />

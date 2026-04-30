@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function Timer() {
-  const targetDate = new Date("2026-06-01T18:00:00").getTime();
+  const targetDate = new Date("2026-05-22T18:00:00").getTime();
 
   const [time, setTime] = useState(null);
   const [mounted, setMounted] = useState(false);
@@ -34,11 +34,11 @@ export default function Timer() {
   }, []);
 
   if (!mounted || !time) {
-    return null; // prevents hydration mismatch
+    return null; 
   }
 
   return (
-    <div className="w-[80%] bg-[#51b957] rounded-2xl flex justify-between items-center px-6 md:px-24 py-4 md:py-8 shadow-2xl shadow-[#51b957]/30 backdrop-blur-md">
+    <div className="w-[80%] bg-[#51b957] rounded-2xl flex justify-between items-center px-6 md:px-24 py-4 md:py-8 shadow-xl shadow-[#51b957]/30 backdrop-blur-lg">
 
       <div className="flex flex-col gap-2 text-center">
         <span className="text-white text-2xl lg:text-5xl">{time[0]}</span>
