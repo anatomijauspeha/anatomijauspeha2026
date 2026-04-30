@@ -46,15 +46,15 @@ export async function POST(req) {
 
     await sendEmail({
       to: email,
-      subject: "Potvrda prijave - Anatomija Uspeha 2026",
+      subject: "Uspešna prijava - Dobrodošli na Anatomiju Uspeha",
       html: `
-        <p>Poštovani,</p>
-        <p>Hvala Vam na prijavi za jubilarno izdanje događaja „Anatomija uspeha“ pod nazivom „trAIn your brAIn“.</p>
-        <p>Događaj će biti održan 22. maja u 18 časova u amfiteatru Naučno-tehnološkog parka u Novom Sadu. Očekuje Vas dinamičan program koji obuhvata panel diskusiju i interaktivni kviz, sa fokusom na odnos veštačke inteligencije i ljudske intuicije u marketingu.</p>
-        <p>U narednom periodu dostavićemo Vam sve dodatne informacije u vezi sa događajem.</p>
-        <p>Radujemo se Vašem dolasku.</p>
-        <p>Srdačan pozdrav,</p>
-        <p>Organizacioni tim događaja „Anatomija uspeha“</p>
+        <p>Zdravo!</p>
+        <p>Uspešno ste prijavljeni za jubilarno izdanje događaja „Anatomija uspeha“ pod nazivom „trAIn your brAIn“.</p>
+        <p>Vidimo se 22. maja u 18 časova u amfiteatru Naučno-tehnološkog parka u Novom Sadu!</p>
+        <p>Očekuje Vas dinamičan program koji spaja AI, neuromarketing, panel diskusiju i interaktivni kviz, uz zanimljive goste i dobru atmosferu.</p>
+        <p>Sve dodatne informacije uskoro stižu, a do tada nas možete zapratiti i pratiti novosti o događaju na: <br>  📸 Instagram: @anatomija_uspeha <br>  🎵 TikTok: @anatomija_uspeha
+        <p>Radujemo se druženju!</p>
+        <p>Organizacioni tim <br> „Anatomija uspeha“</p>
         <img 
           src="https://anatomijauspeha2026.vercel.app/logo_email.png"
           alt="Event Logo"
