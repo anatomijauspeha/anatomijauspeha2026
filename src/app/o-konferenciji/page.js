@@ -3,7 +3,7 @@ import BlogCarousel from "../../../components/BlogCarousel";
 
 export default function About() {
   return (
-    <div className="w-full min-h-screen flex flex-col gap-12 bg-black px-24 py-16">
+    <div className="w-full min-h-screen flex flex-col gap-12 bg-black py-8 px-8 md:px-24 md:py-16">
       <h1 className="w-full text-center text-[#51b957] text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold">
         O KONFERENCIJI
       </h1>
@@ -26,12 +26,12 @@ export default function About() {
               "/2024.png",
               "/2023.png",
               "/2022.png",
-              "/2021.png",
+              "/2021_1.png",
               "/2020.png",
               "/2019.png",
               "/2018.png",
               "/2017.png",
-              "/2016.png",
+              "/2016_2.png",
             ]}
           />
         </div>
