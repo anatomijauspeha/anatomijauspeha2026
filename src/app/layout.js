@@ -18,7 +18,8 @@ const spacemono = Space_Mono({
 
 export const metadata = {
   title: "Anatomija Uspeha 2026",
-  description: "Anatomija Uspeha 2026 - Train Your Brain",
+  description:
+    "Anatomija Uspeha 2026 - Train Your Brain; Anatomija uspeha je konferencija koju organizuju master studenti Fakulteta tehničkih nauka u Novom Sadu sa modula Inženjerski marketing i multimediji.",
   viewport: "width=device-width, initial-scale=1",
 };
 
@@ -28,7 +29,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col font-main">
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

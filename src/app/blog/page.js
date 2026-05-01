@@ -43,13 +43,14 @@ export default function Blog() {
         </span>
       )}
 
-      {blogs.length > 0 ? (
+      {blogs.length > 0 && !loading && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           {blogs.slice(0, visibleCount).map((blog) => (
             <BlogCard key={blog.id} blog={blog} />
           ))}
         </div>
-      ) : (
+      )}
+      {blogs.length == 0 && !loading && (
         <span className="w-full text-center text-[#51b957] text-2xl md:text-4xl font-normal py-16 lg:py-32">
           Trenutno nema blogova.
         </span>
