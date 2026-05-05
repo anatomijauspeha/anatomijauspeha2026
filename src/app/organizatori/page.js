@@ -4,7 +4,7 @@ import { getTeamMembers } from "../../../lib/endpoints/server";
 export default async function OrganizationTeam() {
   const members = await getTeamMembers();
   return (
-    <div className="w-full min-h-screen flex flex-col gap-24 bg-black px-6 py-16 md:px-16 lg:px-24">
+    <div className="w-full min-h-screen flex flex-col md:gap-24 gap-8 bg-black px-6 py-16 md:px-16 lg:px-24">
       <h1 className="w-full text-center text-[#51b957] text-4xl md:text-6xl lg:text-7xl font-bold">
         ORGANIZACIONI TIM
       </h1>

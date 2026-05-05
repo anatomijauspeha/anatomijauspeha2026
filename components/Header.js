@@ -23,9 +23,9 @@ export default function Header() {
           {/* <li className="flex items-center justify-center h-full cursor-pointer px-5 tracking-wide hover:bg-[#3b913f]">
             <Link href="/o-konferenciji">O konferenciji</Link>
           </li> */}
-          {/* <li className="flex items-center justify-center h-full cursor-pointer px-5 tracking-wide hover:bg-[#3b913f]">
+          <li className="flex items-center justify-center h-full cursor-pointer px-5 tracking-wide hover:bg-[#3b913f]">
             <Link href="/organizatori">Organizatori</Link>
-          </li> */}
+          </li>
           <li className="flex items-center justify-center h-full cursor-pointer px-5 tracking-wide hover:bg-[#3b913f]">
             <Link href="/blog">Blog</Link>
           </li>
@@ -44,11 +44,11 @@ export default function Header() {
               O konferenciji
             </Link>
           </li> */}
-          {/* <li>
+          <li>
             <Link href="/organizatori" onClick={() => setIsOpen(false)}>
               Organizatori
             </Link>
-          </li> */}
+          </li>
           <li>
             <Link href="/blog" onClick={() => setIsOpen(false)}>
               Blog
