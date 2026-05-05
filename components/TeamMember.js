@@ -7,7 +7,7 @@ export default function TeamMember({ member }) {
         src={member.img ? member.img : "/person.svg"}
         alt="Team member image"
         fill
-        sizes="(max-width: 768px) 100vw, 33vw"
+        unoptimized
         className="object-contain object-bottom"
       />
       {console.log("Img:", member.img)}
