@@ -10,7 +10,6 @@ export default function TeamMember({ member }) {
         unoptimized
         className="object-contain object-bottom"
       />
-      {console.log("Img:", member.img)}
       <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-[#51b957] rounded-xl sm:rounded-2xl p-2 sm:p-4 text-center shadow-lg">
         <h3 className="text-white text-sm sm:text-lg md:text-xl font-bold tracking-wide">
           {member.firstname} {member.lastname}
