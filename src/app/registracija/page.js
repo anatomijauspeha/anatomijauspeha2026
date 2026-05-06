@@ -20,6 +20,7 @@ export default function RegistrationForm() {
       firstname: e.target.firstname.value,
       lastname: e.target.lastname.value,
       email: e.target.email.value,
+      username: e.target.username.value
     };
 
     try {
@@ -97,6 +98,13 @@ export default function RegistrationForm() {
             name="email"
             type="email"
             placeholder="Email adresa"
+            className="placeholder:text-[#51b957] tracking-widest rounded-xl border text-[#51b957] w-full px-5 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-[#51b957] transition"
+          />
+
+          <input
+            name="username"
+            type="text"
+            placeholder="Instagram username"
             className="placeholder:text-[#51b957] tracking-widest rounded-xl border text-[#51b957] w-full px-5 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-[#51b957] transition"
           />
 

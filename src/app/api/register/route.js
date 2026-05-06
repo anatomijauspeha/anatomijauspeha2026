@@ -8,6 +8,7 @@ export async function POST(req) {
     const firstname = body.firstname?.trim();
     const lastname = body.lastname?.trim();
     const email = body.email?.trim().toLowerCase();
+    const ig_username = body.username?.trim();
 
     if (!firstname || !lastname || !email) {
       return Response.json(
@@ -41,6 +42,7 @@ export async function POST(req) {
       firstname,
       lastname,
       email,
+      ig_username,
       createdAt: new Date(),
     });
 
@@ -73,4 +75,3 @@ export async function POST(req) {
     return Response.json({ error: "Server error" }, { status: 500 });
   }
 }
-//ova da se dodade vo email posle hostiranje
