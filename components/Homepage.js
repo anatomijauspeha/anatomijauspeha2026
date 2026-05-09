@@ -33,12 +33,12 @@ export default function Homepage() {
           />
         </div>
       </div>
-      <button
+      {/* <button
         onClick={navigateToForm}
         className="w-60 md:w-72 h-12 bg-[#51b957] cursor-pointer text-lg md:text-xl tracking-wide text-white rounded-2xl flex items-center justify-center hover:bg-[#3b913f] transition"
       >
         PRIJAVI SE
-      </button>
+      </button> */}
     </div>
   );
 }

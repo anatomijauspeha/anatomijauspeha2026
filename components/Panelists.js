@@ -12,10 +12,10 @@ export default function Panelists() {
         <div className="flex flex-col md:flex-row items-stretch gap-8 md:gap-16 w-full">
           <div className="relative w-full md:w-5/12 min-h-[300px] rounded-2xl overflow-hidden">
             <Image
-              src="/logo1.jpg"
+              src="/nikola.png"
               alt="Panelista"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 
@@ -30,7 +30,7 @@ export default function Panelists() {
               ćelije. Njegovo polje rada obuhvata neuromarketing, neurobrending
               i neurodizajn, sa fokusom na razumevanje pažnje, emocija i
               nesvesnih reakcija potrošača. Kroz predavanja, radionice i
-              edukativni sadržaj na profilu Siva ćelija, približava publici
+              edukativni sadržaj na profilu <b>Siva ćelija</b>, približava publici
               način na koji mozak reaguje na marketinške poruke i vizuelne
               stimulanse.
             </p>
@@ -45,10 +45,10 @@ export default function Panelists() {
         <div className="flex flex-col md:flex-row-reverse items-stretch gap-8 md:gap-16 w-full">
           <div className="relative w-full md:w-5/12 min-h-[300px] rounded-2xl overflow-hidden">
             <Image
-              src="/logo1.jpg"
+              src="/danijela.png"
               alt="Panelista"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 
