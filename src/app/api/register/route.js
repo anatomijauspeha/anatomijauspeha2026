@@ -1,5 +1,6 @@
 import { db } from "../../../../lib/firebaseAdmin";
 import { sendEmail } from "../../../../lib/email";
+import { FieldValue } from "firebase-admin/firestore";
 
 export async function POST(req) {
   try {
@@ -45,6 +46,13 @@ export async function POST(req) {
       ig_username,
       createdAt: new Date(),
     });
+
+    await db.collection("Stats").doc("FormStats").set(
+      {
+        totalSubmissions: FieldValue.increment(1),
+      },
+      { merge: true }
+    );
 
     await sendEmail({
       to: email,
