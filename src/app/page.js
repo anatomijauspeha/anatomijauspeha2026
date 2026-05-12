@@ -13,8 +13,8 @@ export default function Home() {
       <div className="w-full flex justify-center -mt-16 md:-mt-24 z-20 relative">
         <Timer />
       </div>
-      <Panelists />
       <Agenda />
+      <Panelists />
       {/* <div className="relative w-full min-h-[180px] sm:min-h-[120px] md:min-h-[180px] lg:min-h-[370px] overflow-hidden">
       </div>
       <PartnersSponsors/> */}

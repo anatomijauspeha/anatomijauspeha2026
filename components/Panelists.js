@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Panelists() {
   return (
     <section className="w-full min-h-screen bg-black px-6 py-16 md:px-16 lg:px-24 flex flex-col gap-20">
-      <h1 className="w-full text-center text-[#51b957] text-4xl md:text-6xl lg:text-7xl font-bold py-16">
+      <h1 className="w-full text-center text-[#51b957] text-4xl md:text-6xl lg:text-7xl font-bold pb-8 md:pb-16">
         PANELISTI
       </h1>
 

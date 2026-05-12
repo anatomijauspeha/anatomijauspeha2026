@@ -34,30 +34,46 @@ export default function Timer() {
   }, []);
 
   if (!mounted || !time) {
-    return null; 
+    return null;
   }
 
   return (
     <div className="w-[80%] bg-[#51b957] rounded-2xl flex justify-between items-center px-6 md:px-24 py-4 md:py-8 shadow-xl shadow-[#51b957]/30 backdrop-blur-lg">
 
-      <div className="flex flex-col gap-2 text-center">
-        <span className="text-white text-2xl lg:text-5xl">{time[0]}</span>
-        <span className="text-white">Dana</span>
+      <div className="flex flex-col gap-2 items-center">
+        <span className="text-white text-2xl sm:text-4xl lg:text-5xl">
+          {time[0]}
+        </span>
+        <span className="text-white text-xs sm:text-sm lg:text-base">
+          Dana
+        </span>
       </div>
 
-      <div className="flex flex-col gap-2 text-center">
-        <span className="text-white text-2xl lg:text-5xl">{time[1]}</span>
-        <span className="text-white">Sata</span>
+      <div className="flex flex-col gap-2 items-center">
+        <span className="text-white text-2xl sm:text-4xl lg:text-5xl">
+          {time[1]}
+        </span>
+        <span className="text-white text-xs sm:text-sm lg:text-base">
+          Sata
+        </span>
       </div>
 
-      <div className="flex flex-col gap-2 text-center">
-        <span className="text-white text-2xl lg:text-5xl">{time[2]}</span>
-        <span className="text-white">Minuta</span>
+      <div className="flex flex-col gap-2 items-center">
+        <span className="text-white text-2xl sm:text-4xl lg:text-5xl">
+          {time[2]}
+        </span>
+        <span className="text-white text-xs sm:text-sm lg:text-base">
+          Minuta
+        </span>
       </div>
 
-      <div className="flex flex-col gap-2 text-center">
-        <span className="text-white text-2xl lg:text-5xl">{time[3]}</span>
-        <span className="text-white">Sekunde</span>
+      <div className="flex flex-col  gap-2 items-center">
+        <span className="text-white text-2xl sm:text-4xl lg:text-5xl">
+          {time[3]}
+        </span>
+        <span className="text-white text-xs sm:text-sm lg:text-base">
+          Sekunde
+        </span>
       </div>
 
     </div>
