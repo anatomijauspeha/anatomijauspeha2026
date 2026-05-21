@@ -31,3 +31,18 @@ body {
 .font-main {
   font-family: var(--font-orbitron);
 }
+
+.slick-dots {
+  bottom: -40px !important;
+}
+
+.slick-dots li button:before {
+  color: #51b957 !important;
+  font-size: 12px !important;
+  opacity: 0.5 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #51b957 !important;
+  opacity: 1 !important;
+}
