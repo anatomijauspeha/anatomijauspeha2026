@@ -50,7 +50,6 @@ export default async function BlogPost({ params }) {
 
   return (
     <div className="w-full h-auto bg-black text-white">
-      {/* Hero — unchanged */}
       <div className="relative w-full h-[35vh] sm:h-[40vh] md:h-[45vh] lg:h-[50vh] overflow-hidden">
         <Image
           src={blog.img ? blog.img : "/logo1.jpg"}
@@ -69,7 +68,6 @@ export default async function BlogPost({ params }) {
         </div>
       </div>
 
-      {/* Dynamic content blocks */}
       <div className="w-full px-6 py-12 sm:px-10 md:px-16 lg:px-24">
         <div className="max-w-4xl mx-auto">
           {blog.blocks?.map((block, i) => renderBlock(block, i))}
